@@ -2,7 +2,7 @@
   "name": "Custom Background Theme",
   "type": "dark",
   "colors": {
-    "editor.background": "#00000000"
+    "editor.background": "#000000"
   },
   "tokenColors": []
 }

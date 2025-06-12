@@ -1,0 +1,14 @@
+body::before {
+  content: "";
+  background-image: url("vscode-resource:/absolute/path/to/your/project/media/background.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+}

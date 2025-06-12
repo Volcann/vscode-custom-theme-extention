@@ -1,38 +1,33 @@
 {
   "name": "vscode-custom-theme",
-  "displayName": "VS Code Custom Theme with Background",
-  "description": "A custom VS Code theme extension that adds a background image and lets you tweak styles.",
+  "displayName": "Custom Theme Panel",
+  "description": "A webview-based VS Code extension that shows a custom background theme.",
   "version": "0.0.1",
-  "publisher": "your-name-or-org",
+  "publisher": "your-name",
   "engines": {
-    "vscode": "^1.85.0"
+    "vscode": "^1.70.0"
   },
-  "categories": [
-    "Themes"
+  "activationEvents": [
+    "onCommand:customTheme.showPanel"
   ],
+  "main": "./dist/extension.js",
   "contributes": {
-    "themes": [
+    "commands": [
       {
-        "label": "Custom Background Theme",
-        "uiTheme": "vs-dark",
-        "path": "./themes/Custom-Background-Theme-color-theme.json"
+        "command": "customTheme.showPanel",
+        "title": "Show Custom Theme Panel"
       }
     ]
   },
-  "activationEvents": [
-    "onStartupFinished"
-  ],
-  "main": "./dist/extension.js",
   "scripts": {
     "vscode:prepublish": "npm run build",
-    "build": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
-    "pretest": "npm run build"
+    "build": "tsc -p .",
+    "watch": "tsc -watch -p ."
   },
   "devDependencies": {
     "@types/node": "^24.0.1",
-    "@types/vscode": "^1.85.0",
-    "typescript": "^5.3.3",
-    "vsce": "^1.97.0"
+    "@types/vscode": "^1.70.0",
+    "typescript": "^4.8.0",
+    "vsce": "^2.15.0"
   }
 }
