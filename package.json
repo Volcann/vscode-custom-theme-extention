@@ -1,0 +1,38 @@
+{
+  "name": "vscode-custom-theme",
+  "displayName": "VS Code Custom Theme with Background",
+  "description": "A custom VS Code theme extension that adds a background image and lets you tweak styles.",
+  "version": "0.0.1",
+  "publisher": "your-name-or-org",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Custom Background Theme",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Custom-Background-Theme-color-theme.json"
+      }
+    ]
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "scripts": {
+    "vscode:prepublish": "npm run build",
+    "build": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.1",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.3.3",
+    "vsce": "^1.97.0"
+  }
+}
